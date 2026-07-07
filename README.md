@@ -6,7 +6,7 @@
 
 <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=16&pause=1500&color=2F81F7&center=true&vCenter=true&width=600&lines=Building+multi-agent+systems+for+real+workflows;5+agents+%2B+Claude+reconciler+gave+%2B21.8%25+accuracy;8-agent+invoice+pipeline+at+%240.003+per+document;Now+tracing+error+cascades+in+shared-memory+agents" alt="Typing SVG" />
 
-📍 Mannheim, Germany &nbsp;·&nbsp; 🎓 MSc Applied Data Science, SRH Heidelberg (2026) &nbsp;·&nbsp; 🟢 Open to working-student roles now, full-time from Sept 2026
+📍 Mannheim, Germany &nbsp;·&nbsp; 🎓 MSc Applied Data Science, SRH Heidelberg (2026) &nbsp;·&nbsp; 🟢 Open to working-student roles, full-time from Oct 2026
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashwin-j-ab0894214/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:ashwin.apps00@gmail.com)
@@ -64,7 +64,9 @@ Ingests NVD and CISA vulnerability feeds and ranks them by exploitability and op
 ### 🧰 Stack
 
 **AI & Agents** &nbsp; `LangChain` `Claude` `OpenAI API` `RAG` `Neo4j / GraphRAG` `Vector Search`
+
 **Data & Cloud** &nbsp; `AWS` `GCP` `Azure` `dbt` `Airflow` `Kafka` `Kubernetes` `Docker`
+
 **Core** &nbsp; `Python` `SQL` `PostgreSQL` `Git` `GitHub Actions` `pytest`
 
 ### 📊 GitHub
