@@ -2,11 +2,11 @@
 
 # Ashwin Jayan
 
-### AI Engineer - Multi-Agent Systems & Applied ML
+### AI Engineer - Multi-Agent Systems and Applied ML
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=16&pause=1500&color=2F81F7&center=true&vCenter=true&width=600&lines=Building+multi-agent+systems+for+real+workflows;5+agents+%2B+Claude+reconciler+gave+%2B21.8%25+accuracy;8-agent+invoice+pipeline+at+%240.003+per+document;Now+tracing+error+cascades+in+shared-memory+agents" alt="Typing SVG" />
+📍 Mannheim, Germany &nbsp;·&nbsp; 🎓 MSc Applied Data Science and Analytics, SRH Heidelberg (September 2026)
 
-📍 Mannheim, Germany &nbsp;·&nbsp; 🎓 MSc Applied Data Science, SRH Heidelberg (2026) &nbsp;·&nbsp; 🟢 Open to working-student roles, full-time from Oct 2026
+🟢 Available from 20 September 2026. Non-EU national on an 18-month post-study residence permit, eligible for an EU Blue Card.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashwin-j-ab0894214/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:ashwin.apps00@gmail.com)
@@ -17,59 +17,55 @@
 
 ### About
 
-I spent three years running production infrastructure at Capgemini before moving into applied AI. Now I build multi-agent systems that plug into real workflows, not demos - with cost caps, human-in-the-loop correction, and evals baked in from the start. My master's thesis traces how a single extraction error cascades through a shared-memory multi-agent system, adapting epidemiological SIR models to measure how fast bad facts spread through a knowledge graph.
+I spent three years keeping production middleware alive at Capgemini before moving into applied AI. Now I build multi-agent systems meant to be run rather than demoed, with cost caps, human-in-the-loop correction and evaluation built in from the start. My master's thesis traces how a single extraction error spreads through a shared-memory multi-agent system, adapting epidemiological SIR models to measure how fast bad facts move through a knowledge graph.
 
-### 🤖 Featured Builds
+### Featured Builds
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-**[Compass](https://github.com/Ash-git-create/Compass)** - Agentic Demand-Planning Copilot
-`Python` `Claude Opus API` `DuckDB` `Streamlit`
+**[SMMA-AI](https://github.com/Ash-git-create/SMMA-AI)** - Cascading Knowledge Contamination
+`Python` `Neo4j` `Mistral Nemo 12B` `Llama 3.1 8B` `Claude`
 
-5-agent pipeline (demand, supply, finance, commercial, memory) plus a Claude reconciler that turns planner overrides into scored forecast decisions. Tested on 23 planning cycles / 68k+ item-months → **+21.8% forecast accuracy**.
+Master's thesis, submitting September 2026. A Neo4j graph of 50,000 facts that three LLM agents read from and write to. 45 controlled extraction errors across 3 error types, traced over 10-step runs on 4 random seeds. Finding: memory can be badly contaminated while HotpotQA exact match and FEVER veracity stay flat, so task scores hide the damage.
 
 </td>
 <td width="50%" valign="top">
 
 **[InvoiceGuard](https://github.com/Ash-git-create/invoicegaurd)** - Multi-Agent Invoice Verification
-`Python` `OpenAI API` `Flask` `React`
+`Python` `OpenAI API` `Flask` `SQLite` `React`
 
-8-agent pipeline reading invoices across 7 formats (including OCR), with human-in-the-loop correction and per-agent token cost caps. Holds cost to **$0.003–0.008 per invoice**.
+Eight agents read invoices in seven formats including OCR, then run service, anomaly and vendor-pattern checks in parallel before a decision agent rules. gpt-4o-mini for the structured calls, gpt-4o only where conflicting flags need reconciling. Token use logged per agent behind a cumulative hard stop, holding a typical invoice to 0.003 to 0.008 dollars. Audit log made immutable with database triggers.
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-**[AI4AIR](https://github.com/Ash-git-create/AI4AIR)** - Multi-Agent Air Quality Intelligence
-`Python` `LangChain` `PostgreSQL` `Streamlit`
+**[Compass](https://github.com/Ash-git-create/Compass)** - Demand-Planning Copilot
+`Python` `Claude API` `DuckDB` `Streamlit` `Plotly`
 
-Ingestion pipeline pulling live data from 5 public air-quality APIs into Postgres at **100,000+ records/day**, with evaluation checks that catch LLM factual errors before they hit the dashboard.
+Five deterministic signal agents read order books, stock cover, campaigns and financials, then one Claude call per decision weighs the evidence into a proposed override with a written rationale. Built in three days for a hackathon. Across 23 planning cycles of anonymised industrial demand data (68,126 item-months), planner overrides cut weighted error from 19.2% to 15.0%.
 
 </td>
 <td width="50%" valign="top">
 
-**[Cyber Risk Pipeline](https://github.com/Ash-git-create/cyber-risk-pipeline)** - Automated Vulnerability Scoring
-`GCP` `BigQuery` `dbt` `SQL` `GitHub Actions`
+**[Interpretable Demand Forecasting](https://github.com/Ash-git-create/interpretable-demand-forecasting-in-retail)** - Promotion-Aware Retail Forecasting
+`Python` `LightGBM` `SHAP` `M5`
 
-Ingests NVD and CISA vulnerability feeds and ranks them by exploitability and operational risk with a weighted scoring model, refreshed on a schedule via GitHub Actions.
+LightGBM against a seasonal-naive baseline on M5, scored inside a 365-day promotion-focused window because the standard 28-day holdout held too few promotion rows to be stable. On 32,378 promotion rows, MAE 0.9268 against the baseline's 1.4284. Exact TreeSHAP for regime-level attribution.
 
 </td>
 </tr>
 </table>
 
-### 🧰 Stack
+Also: **[Cyber Risk Pipeline](https://github.com/Ash-git-create/cyber-risk-pipeline)**, NVD, CISA KEV and AlienVault OTX feeds scored in BigQuery with dbt, which ran hourly on GitHub Actions for 597 successful builds. **[LLM Audit Workbench](https://github.com/Ash-git-create/LLM_Audit_Workbench)**, a local harness for versioning prompts, scoring outputs and reviewing what gets flagged.
 
-**AI & Agents** &nbsp; `LangChain` `Claude` `OpenAI API` `RAG` `Neo4j / GraphRAG` `Vector Search`
+### Stack
 
-**Data & Cloud** &nbsp; `AWS` `GCP` `Azure` `dbt` `Airflow` `Kafka` `Kubernetes` `Docker`
+**AI and agents** &nbsp; `Claude API` `OpenAI API` `Multi-agent pipelines` `RAG` `Neo4j knowledge graphs` `Vector search` `Prompt engineering` `Token budgeting and cost caps` `Human-in-the-loop review`
 
-**Core** &nbsp; `Python` `SQL` `PostgreSQL` `Git` `GitHub Actions` `pytest`
+**Data** &nbsp; `Python` `SQL` `DuckDB` `MySQL` `SQLite` `Neo4j` `dbt` `BigQuery` `GCP` `LightGBM` `SHAP`
 
-### 📊 GitHub
-
-<div align="center">
-<img src="./profile/stats.svg" alt="GitHub stats" height="165"/>
-</div>
+**Engineering** &nbsp; `Git` `GitHub Actions` `pytest` `Docker` `Streamlit` `Flask` `Pydantic`
